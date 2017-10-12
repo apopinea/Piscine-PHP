@@ -1,0 +1,900 @@
+<html>
+		<head>
+			<title>mendeleiev</title>
+			<style>
+			@import url('https://fonts.googleapis.com/css?family=Orbitron');
+			body{
+							background-image: url("https://images8.alphacoders.com/397/397989.jpg");
+
+			}
+			h1 {
+							margin-top: 50px;
+							text-align: center;
+							color: white;
+							font-family: 'Orbitron', sans-serif;
+							font-size: 50px;
+			}
+			table{
+							border-collapse: collapse;
+							margin-right: 15px;
+							font
+						}
+			th, tr, td{
+							height: 5.5vw;
+							width: 5vw;
+							}
+
+			th, td {color: white;}
+
+			.el:hover {
+							border:1px solid white;}
+
+			td:nth-child(1){
+							text-align: center;
+			}
+
+			.el{
+							position: relative;
+							display: block;
+							color: black;
+							width: 95%;
+							height: 100%;
+							margin: 0;
+							padding: 0;
+							border:1px solid black;
+			}
+
+			#focus_content {
+							width: 100%;
+							height: 100%;
+							position: relative;
+			}
+			#focus {
+							display: none;
+							position: absolute;
+							margin-left: 50%;
+							color: red;
+							width: 15%;
+							height: 80%;
+							border-style: solid;}
+		#f_type {
+							position: absolute;
+							display: none;
+							margin-left: 10%;
+							color: white;
+							height: 2vw;
+							width: 2vw;
+							border-style: solid;
+		}
+
+			#el_name{
+								display: block;
+								padding-top: 5px;
+								font-family: "Arial Black";
+								font-size: 1.2vw;
+								text-align: center;}
+			#el_cname{
+								display: block;
+								font-family: "verdana";
+								font-size: 0.7vw;
+								text-align: center;}
+			#el_na{
+								position: absolute;
+								bottom: 0;
+								display: block;
+								font-family: "verdana";
+								font-size: 1vw;}
+			#el_mo{
+								height:15%;
+								text-align: right;
+								font-family: "verdana";
+								font-size: 1vw;}
+			#metaux_alcalins {background-color: rgb(96, 22, 20);}
+			#alcalino_terreux {background-color: rgb(165, 136, 25);}
+			#lanthanides {background-color: rgb(72, 69, 94);}
+			#actinides {background-color: rgb(57, 57, 62);}
+			#metaux_transitoires {background-color: rgb(165, 29, 25);}
+			#metaux_pauvres {background-color: rgb(250, 7, 1);}
+			#metalloides {background-color: rgb(96, 81, 20);}
+			#non_metaux {background-color: rgb(250, 199, 1);}
+			#halogene {background-color: rgb(1, 196, 14);}
+			#gaz_nobles {background-color: rgb(59, 29, 228);}
+			#non_classes {background-color: rgb(43, 30, 114);}
+
+			</style>
+		</head>
+		<body>
+				<div id="page_content">
+					<h1>Tableau périodique des elements</h1>
+					<table>
+						<tr>
+							<th></th>
+							<th>I</th>
+							<th>II</th>
+							<th>III</th>
+							<th>IV</th>
+							<th>V</th>
+							<th>VI</th>
+							<th>VII</th>
+							<th>VIII</th>
+							<th>IX</th>
+							<th>X</th>
+							<th>XI</th>
+							<th>XII</th>
+							<th>XIII</th>
+							<th>XIV</th>
+							<th>XV</th>
+							<th>XVI</th>
+							<th>XVII</th>
+							<th>XVIII</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td contenteditable = "true">
+								<div class="el" id="non_metaux">
+										<div id="el_mo">1.008</div>
+										<div id="el_name">H</div>
+										<div id="el_cname">HYDROGENE</div>
+										<div id="el_na">1</div>
+								</div>
+							</td>
+							<td></td>
+							<td colspan="10" rowspan="3">
+								<div id="focus_content">
+									<div id="f_type"></div>
+									<div id="focus"></div>
+							</div>
+							</td>
+							<td colspan="5"></td>
+							<td contenteditable = "true">
+								<div class="el" id="gaz_nobles">
+										<div id="el_mo">4.003</div>
+										<div id="el_name">He</div>
+										<div id="el_cname">HELIUM</div>
+										<div id="el_na">2</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td contenteditable = "true">
+								<div class="el" id="metaux_alcalins">
+								<div id="el_mo">6.941</div>
+								<div id="el_name">Li</div>
+								<div id="el_cname">LITHIUM</div>
+								<div id="el_na">3</div>
+								</div></td>
+							<td contenteditable = "true">
+								<div class="el" id="alcalino_terreux">
+								<div id="el_mo">9.012</div>
+								<div id="el_name">Be</div>
+								<div id="el_cname">BERYLLIUM</div>
+								<div id="el_na">4</div>
+								</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">10.811</div>
+							<div id="el_name">B</div>
+							<div id="el_cname">BORE</div>
+							<div id="el_na">5</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">12.011</div>
+							<div id="el_name">C</div>
+							<div id="el_cname">CARBONE</div>
+							<div id="el_na">6</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">14.007</div>
+							<div id="el_name">N</div>
+							<div id="el_cname">AZOTE</div>
+							<div id="el_na">7</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">15.999</div>
+							<div id="el_name">O</div>
+							<div id="el_cname">OXYGENE</div>
+							<div id="el_na">8</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="halogene">
+							<div id="el_mo">18.998</div>
+							<div id="el_name">F</div>
+							<div id="el_cname">FLUOR</div>
+							<div id="el_na">9</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="gaz_nobles">
+							<div id="el_mo">20.180</div>
+							<div id="el_name">Ne</div>
+							<div id="el_cname">NEON</div>
+							<div id="el_na">10</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td contenteditable = "true"><div class="el" id="metaux_alcalins">
+							<div id="el_mo">22.990</div>
+							<div id="el_name">Na</div>
+							<div id="el_cname">SODIUM</div>
+							<div id="el_na">11</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="alcalino_terreux">
+							<div id="el_mo">24.305</div>
+							<div id="el_name">Mg</div>
+							<div id="el_cname">MAGNESIUM</div>
+							<div id="el_na">12</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">26.982</div>
+							<div id="el_name">Al</div>
+							<div id="el_cname">ALUMINIUM</div>
+							<div id="el_na">13</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">28.086</div>
+							<div id="el_name">Si</div>
+							<div id="el_cname">SILICIUM</div>
+							<div id="el_na">14</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">30.974</div>
+							<div id="el_name">P</div>
+							<div id="el_cname">PHOSPHORE</div>
+							<div id="el_na">15</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">32.065</div>
+							<div id="el_name">S</div>
+							<div id="el_cname">SOUFRE</div>
+							<div id="el_na">16</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="halogene">
+							<div id="el_mo">35.453</div>
+							<div id="el_name">Cl</div>
+							<div id="el_cname">CHLORE</div>
+							<div id="el_na">17</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="gaz_nobles">
+							<div id="el_mo">39.948</div>
+							<div id="el_name">Ar</div>
+							<div id="el_cname">ARGON</div>
+							<div id="el_na">18</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td contenteditable = "true"><div class="el" id="metaux_alcalins">
+							<div id="el_mo">39.098</div>
+							<div id="el_name">K</div>
+							<div id="el_cname">POTASSIUM</div>
+							<div id="el_na">19</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="alcalino_terreux">
+							<div id="el_mo">40.078</div>
+							<div id="el_name">Ca</div>
+							<div id="el_cname">CALCIUM</div>
+							<div id="el_na">20</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">44.956</div>
+							<div id="el_name">Sc</div>
+							<div id="el_cname">SCANDIUM</div>
+							<div id="el_na">21</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">47.867</div>
+							<div id="el_name">Ti</div>
+							<div id="el_cname">TITANE</div>
+							<div id="el_na">22</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">50.942</div>
+							<div id="el_name">V</div>
+							<div id="el_cname">VANADIUM</div>
+							<div id="el_na">23</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">51.996</div>
+							<div id="el_name">Cr</div>
+							<div id="el_cname">CHROME</div>
+							<div id="el_na">24</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">54.938</div>
+							<div id="el_name">Mn</div>
+							<div id="el_cname">MANGANESE</div>
+							<div id="el_na">25</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">55.845</div>
+							<div id="el_name">Fe</div>
+							<div id="el_cname">FER</div>
+							<div id="el_na">26</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">58.933</div>
+							<div id="el_name">Co</div>
+							<div id="el_cname">COBALT</div>
+							<div id="el_na">27</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">58.693</div>
+							<div id="el_name">Ni</div>
+							<div id="el_cname">NICKEL</div>
+							<div id="el_na">28</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">63.546</div>
+							<div id="el_name">Cu</div>
+							<div id="el_cname">CUIVRE</div>
+							<div id="el_na">29</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">65.390</div>
+							<div id="el_name">Zn</div>
+							<div id="el_cname">ZINC</div>
+							<div id="el_na">30</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">69.723</div>
+							<div id="el_name">Ga</div>
+							<div id="el_cname">GALLIUM</div>
+							<div id="el_na">31</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">72.640</div>
+							<div id="el_name">Ge</div>
+							<div id="el_cname">GERMANIUM</div>
+							<div id="el_na">32</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">74.922</div>
+							<div id="el_name">As</div>
+							<div id="el_cname">ARSENIC</div>
+							<div id="el_na">33</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_metaux">
+							<div id="el_mo">78.960</div>
+							<div id="el_name">Se</div>
+							<div id="el_cname">SELENIUM</div>
+							<div id="el_na">34</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="halogene">
+							<div id="el_mo">79.904</div>
+							<div id="el_name">Br</div>
+							<div id="el_cname">BROME</div>
+							<div id="el_na">35</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="gaz_nobles">
+							<div id="el_mo">83.80</div>
+							<div id="el_name">Kr</div>
+							<div id="el_cname">KRYPTON</div>
+							<div id="el_na">36</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td contenteditable = "true"><div class="el" id="metaux_alcalins">
+							<div id="el_mo">85.468</div>
+							<div id="el_name">Rb</div>
+							<div id="el_cname">RUBIDIUM</div>
+							<div id="el_na">37</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="alcalino_terreux">
+							<div id="el_mo">87.62</div>
+							<div id="el_name">Sr</div>
+							<div id="el_cname">STRONTIUM</div>
+							<div id="el_na">38</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">88.906</div>
+							<div id="el_name">Y</div>
+							<div id="el_cname">YTTRIUM</div>
+							<div id="el_na">39</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">91.224</div>
+							<div id="el_name">Zr</div>
+							<div id="el_cname">ZIRCONIUM</div>
+							<div id="el_na">40</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">92.906</div>
+							<div id="el_name">Nb</div>
+							<div id="el_cname">NIOBIUM</div>
+							<div id="el_na">41</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">95.940</div>
+							<div id="el_name">Mo</div>
+							<div id="el_cname">MOLYBDENE</div>
+							<div id="el_na">42</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(98)</div>
+							<div id="el_name">Tc</div>
+							<div id="el_cname">TECHNETIUM</div>
+							<div id="el_na">43</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">101.07</div>
+							<div id="el_name">Ru</div>
+							<div id="el_cname">RUTHENIUM</div>
+							<div id="el_na">44</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">102.91</div>
+							<div id="el_name">Rh</div>
+							<div id="el_cname">RHODIUM</div>
+							<div id="el_na">45</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">106.42</div>
+							<div id="el_name">Pd</div>
+							<div id="el_cname">PALLADIUM</div>
+							<div id="el_na">46</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">107.87</div>
+							<div id="el_name">Ag</div>
+							<div id="el_cname">ARGENT</div>
+							<div id="el_na">47</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">112.41</div>
+							<div id="el_name">Cd</div>
+							<div id="el_cname">CADIUM</div>
+							<div id="el_na">48</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">114.82</div>
+							<div id="el_name">In</div>
+							<div id="el_cname">INDIUM</div>
+							<div id="el_na">49</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">118.71</div>
+							<div id="el_name">Sn</div>
+							<div id="el_cname">ETAIN</div>
+							<div id="el_na">50</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">121.76</div>
+							<div id="el_name">Sb</div>
+							<div id="el_cname">ANTIMOINE</div>
+							<div id="el_na">51</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">127.60</div>
+							<div id="el_name">Te</div>
+							<div id="el_cname">TELLURE</div>
+							<div id="el_na">52</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="halogene">
+							<div id="el_mo">126.90</div>
+							<div id="el_name">I</div>
+							<div id="el_cname">IODE</div>
+							<div id="el_na">53</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="gaz_nobles">
+							<div id="el_mo">131.29</div>
+							<div id="el_name">Xe</div>
+							<div id="el_cname">XEON</div>
+							<div id="el_na">54</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td contenteditable = "true"><div class="el" id="metaux_alcalins">
+							<div id="el_mo">132.91</div>
+							<div id="el_name">Cs</div>
+							<div id="el_cname">CESIUM</div>
+							<div id="el_na">55</div>
+							</div>	</td>
+							<td contenteditable = "true"><div class="el" id="alcalino_terreux">
+							<div id="el_mo">137.33</div>
+							<div id="el_name">Ba</div>
+							<div id="el_cname">BARYUM</div>
+							<div id="el_na">56</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="Lanthanides">
+							<div id="el_name">La - Lu</div>
+							<div id="el_cname">Lanthanides</div>
+							<div id="el_na">57 - 71</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">178.49</div>
+							<div id="el_name">Hf</div>
+							<div id="el_cname">HAFNIUM</div>
+							<div id="el_na">72</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">180.95</div>
+							<div id="el_name">Ta</div>
+							<div id="el_cname">TANTALE</div>
+							<div id="el_na">73</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">183.84</div>
+							<div id="el_name">W</div>
+							<div id="el_cname">TUNGSTENE</div>
+							<div id="el_na">74</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">186.21</div>
+							<div id="el_name">Re</div>
+							<div id="el_cname">RHENIUM</div>
+							<div id="el_na">75</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">190.23</div>
+							<div id="el_name">Os</div>
+							<div id="el_cname">OSMIUM</div>
+							<div id="el_na">76</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">192.22</div>
+							<div id="el_name">Ir</div>
+							<div id="el_cname">IRIDIUM</div>
+							<div id="el_na">77</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">195.08</div>
+							<div id="el_name">Pt</div>
+							<div id="el_cname">PLATINE</div>
+							<div id="el_na">78</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">196.97</div>
+							<div id="el_name">Au</div>
+							<div id="el_cname">Or</div>
+							<div id="el_na">79</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">200.59</div>
+							<div id="el_name">Hg</div>
+							<div id="el_cname">MERCURE</div>
+							<div id="el_na">80</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">204.38</div>
+							<div id="el_name">Tl</div>
+							<div id="el_cname">THALLIUM</div>
+							<div id="el_na">81</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">207.2</div>
+							<div id="el_name">Pb</div>
+							<div id="el_cname">PLOMB</div>
+							<div id="el_na">82</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">208.98</div>
+							<div id="el_name">Bi</div>
+							<div id="el_cname">BISMUTH</div>
+							<div id="el_na">83</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_pauvres">
+							<div id="el_mo">(209)</div>
+							<div id="el_name">Po</div>
+							<div id="el_cname">POLONIUM</div>
+							<div id="el_na">84</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metalloides">
+							<div id="el_mo">(210)</div>
+							<div id="el_name">At</div>
+							<div id="el_cname">ASTATE</div>
+							<div id="el_na">85</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="gaz_nobles">
+							<div id="el_mo">(222)</div>
+							<div id="el_name">Rn</div>
+							<div id="el_cname">RADON</div>
+							<div id="el_na">86</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td contenteditable = "true"><div class="el" id="metaux_alcalins">
+							<div id="el_mo">(223)</div>
+							<div id="el_name">Fr</div>
+							<div id="el_cname">FRANCIUM</div>
+							<div id="el_na">87</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="alcalino_terreux">
+							<div id="el_mo">(226)</div>
+							<div id="el_name">Ra</div>
+							<div id="el_cname">RADIUM</div>
+							<div id="el_na">88</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_name">Ac - Lr</div>
+							<div id="el_cname">Actinides</div>
+							<div id="el_na">89 - 103</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(261)</div>
+							<div id="el_name">Rf</div>
+							<div id="el_cname">RUTHERFORDIUM</div>
+							<div id="el_na">104</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(262)</div>
+							<div id="el_name">Db</div>
+							<div id="el_cname">DUBNIUM</div>
+							<div id="el_na">105</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(266)</div>
+							<div id="el_name">Sg</div>
+							<div id="el_cname">SEABORGIUM</div>
+							<div id="el_na">106</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(264)</div>
+							<div id="el_name">Bh</div>
+							<div id="el_cname">BOHRIUM</div>
+							<div id="el_na">107</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(277)</div>
+							<div id="el_name">Hs</div>
+							<div id="el_cname">HASSIUM</div>
+							<div id="el_na">108</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(268)</div>
+							<div id="el_name">Mt</div>
+							<div id="el_cname">MEITNERIUM</div>
+							<div id="el_na">109</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(281)</div>
+							<div id="el_name">Ds</div>
+							<div id="el_cname">DARMSTADIUM</div>
+							<div id="el_na">110</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(272)</div>
+							<div id="el_name">Rg</div>
+							<div id="el_cname">ROENTGENIUM</div>
+							<div id="el_na">111</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="metaux_transitoires">
+							<div id="el_mo">(285)</div>
+							<div id="el_name">Cn</div>
+							<div id="el_cname">COPERNICIUM</div>
+							<div id="el_na">112</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(286)</div>
+							<div id="el_name">Nh</div>
+							<div id="el_cname">Nihonium</div>
+							<div id="el_na">113</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(289)</div>
+							<div id="el_name">Fl</div>
+							<div id="el_cname">FLEROVIUM</div>
+							<div id="el_na">114</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(289)</div>
+							<div id="el_name">Mc</div>
+							<div id="el_cname">MOSCOVIUM</div>
+							<div id="el_na">115</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(293)</div>
+							<div id="el_name">Lv</div>
+							<div id="el_cname">LIVERMORIUM</div>
+							<div id="el_na">116</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(294)</div>
+							<div id="el_name">Ts</div>
+							<div id="el_cname">TENNESSE</div>
+							<div id="el_na">117</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="non_classes">
+							<div id="el_mo">(294)</div>
+							<div id="el_name">Og</div>
+							<div id="el_cname">OGANESSON</div>
+							<div id="el_na">118</div>
+							</div></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">138.905</div>
+							<div id="el_name">La</div>
+							<div id="el_cname">LANTHANE</div>
+							<div id="el_na">57</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">140.116</div>
+							<div id="el_name">Ce</div>
+							<div id="el_cname">CERIUM</div>
+							<div id="el_na">58</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">140.907</div>
+							<div id="el_name">Pr</div>
+							<div id="el_cname">PRASEODYME</div>
+							<div id="el_na">59</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">144.242</div>
+							<div id="el_name">Nd</div>
+							<div id="el_cname">NEODYME</div>
+							<div id="el_na">60</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">(145)</div>
+							<div id="el_name">Pm</div>
+							<div id="el_cname">PROMETHIUM</div>
+							<div id="el_na">61</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">150.36</div>
+							<div id="el_name">Sm</div>
+							<div id="el_cname">SAMARIUM</div>
+							<div id="el_na">62</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">151.96</div>
+							<div id="el_name">Eu</div>
+							<div id="el_cname">EUROPIUM</div>
+							<div id="el_na">63</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">157.25</div>
+							<div id="el_name">Gd</div>
+							<div id="el_cname">GADOLINIUM</div>
+							<div id="el_na">64</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">158.92</div>
+							<div id="el_name">Td</div>
+							<div id="el_cname">TERBIUM</div>
+							<div id="el_na">65</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">162.5</div>
+							<div id="el_name">Dy</div>
+							<div id="el_cname">DYSPROSIUM</div>
+							<div id="el_na">66</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">164.93</div>
+							<div id="el_name">Ho</div>
+							<div id="el_cname">HOLMIUM</div>
+							<div id="el_na">67</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">167.26</div>
+							<div id="el_name">Er</div>
+							<div id="el_cname">ERBIUM</div>
+							<div id="el_na">68</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">168.93</div>
+							<div id="el_name">Tm</div>
+							<div id="el_cname">THULIUM</div>
+							<div id="el_na">69</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">173.04</div>
+							<div id="el_name">Yb</div>
+							<div id="el_cname">YTTERBIUM</div>
+							<div id="el_na">70</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="lanthanides">
+							<div id="el_mo">174.96</div>
+							<div id="el_name">Lu</div>
+							<div id="el_cname">LUTECIUM</div>
+							<div id="el_na">71</div>
+							</div></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(227)</div>
+							<div id="el_name">Ac</div>
+							<div id="el_cname">AC</div>
+							<div id="el_na">71</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">232.037</div>
+							<div id="el_name">Th</div>
+							<div id="el_cname">THORIUM</div>
+							<div id="el_na">90</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">231.03</div>
+							<div id="el_name">Pa</div>
+							<div id="el_cname">PROTACTINIUM</div>
+							<div id="el_na">91</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">238.02</div>
+							<div id="el_name">U</div>
+							<div id="el_cname">URANIUM</div>
+							<div id="el_na">92</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(237)</div>
+							<div id="el_name">Np</div>
+							<div id="el_cname">NEPTUNIUM</div>
+							<div id="el_na">93</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(244)</div>
+							<div id="el_name">Pu</div>
+							<div id="el_cname">PLUTONIUM</div>
+							<div id="el_na">94</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(243)</div>
+							<div id="el_name">Am</div>
+							<div id="el_cname">AMERICIUM</div>
+							<div id="el_na">95</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(247)</div>
+							<div id="el_name">Cm</div>
+							<div id="el_cname">CURIUM</div>
+							<div id="el_na">96</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(247)</div>
+							<div id="el_name">Bk</div>
+							<div id="el_cname">BERKELIUM</div>
+							<div id="el_na">97</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(251)</div>
+							<div id="el_name">Cf</div>
+							<div id="el_cname">CALIFORNIUM</div>
+							<div id="el_na">98</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(252)</div>
+							<div id="el_name">Es</div>
+							<div id="el_cname">EINSTENIUM</div>
+							<div id="el_na">99</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(257)</div>
+							<div id="el_name">Fm</div>
+							<div id="el_cname">FERMIUM</div>
+							<div id="el_na">100</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(258)</div>
+							<div id="el_name">Md</div>
+							<div id="el_cname">MENDELEVIUM</div>
+							<div id="el_na">101</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(259)</div>
+							<div id="el_name">No</div>
+							<div id="el_cname">NOBELIUM</div>
+							<div id="el_na">102</div>
+							</div></td>
+							<td contenteditable = "true"><div class="el" id="actinides">
+							<div id="el_mo">(266)</div>
+							<div id="el_name">Lr</div>
+							<div id="el_cname">LAWRENCIUM</div>
+							<div id="el_na">103</div>
+							</div></td>
+						</tr>
+					</table>
+				</div>
+		</body>
+</html>

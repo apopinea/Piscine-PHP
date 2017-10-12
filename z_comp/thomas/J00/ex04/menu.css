@@ -1,0 +1,25 @@
+html, body {
+	  padding: 0;
+	  maring: 0;
+}
+
+.menu{
+	font-size: 1.2em;
+	font-family: Arial;
+	background-color: #3939ac;
+	list-style: none;
+}
+
+.menu > li:hover li{
+	  max-height: 20px;
+}
+
+.menu > li li{
+	  max-height: 0;
+	  overflow: hidden;
+}
+
+a:link{
+	text-decoration: none;
+	color: white;
+}

@@ -1,0 +1,131 @@
+body{
+	background-image: url("https://images8.alphacoders.com/397/397989.jpg");
+}
+
+.big_title {
+	margin-top: 5vw;
+	text-align: center;
+	color: white;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 5vw;
+}
+
+#mede_portrait {
+	margin: auto;
+	width: 32vw;
+	height: 32vw;
+	max-width: 640px;
+	max-height: 449px;
+	background-size: 100%;
+	border-radius: 10vw 0em;
+	margin-top: 7vw;
+	margin-bottom: 5vw;
+	border: ridge 8px;
+	border-color: #a67909;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mendeleev_Photographische_Gesellschaft_3.jpg/220px-Mendeleev_Photographische_Gesellschaft_3.jpg);
+}
+
+#tab_per_elem {
+	margin: auto;
+	margin-bottom: 8vw;
+}
+
+th {
+	width: 5%;
+	background-color: rgb(199, 191, 187);
+	border-radius: 0.7vw 0.7vw;
+	border: 0.10vw solid rgb(100, 88, 82);
+	font-size: 1vw;
+}
+
+td {
+	width: 5%;
+	border-radius: 0.7vw 0.7vw;
+	font-size: 1vw;
+}
+
+.el_mol {
+	text-align: right;
+	font-size: 0.9vw;
+}
+
+.el_symbole {
+	text-align: center;
+	font-size: 1.2vw;
+	font-family: "Arial Black";
+}
+
+.el_name {
+	text-align: center;
+	font-size: 0.7vw;
+
+}
+
+.el_num_atom {
+	text-align: left;
+	font-size: 0.9vw;
+}
+
+.non_metaux {
+	background-color: rgb(250, 199, 1);
+	border: solid 0.10vw rgb(147, 115, 0);
+}
+
+.gaz_nobles {
+	background-color: rgb(160, 148, 228);
+	border: solid 0.10vw rgb(50, 34, 138);
+}
+
+.metaux_alcalins {
+	background-color: rgb(170, 239, 138);
+	border: solid 0.10vw rgb(44, 107, 14);
+}
+
+.metaux_alcalino_terreux {
+	background-color: rgb(133, 195, 248);
+	border: solid 0.10vw rgb(8, 94, 169);
+}
+
+.metalloide {
+	background-color: rgb(253, 165, 149);
+	border: solid 0.10vw rgb(195, 31, 2);
+}
+
+.halogenes {
+	background-color: rgb(242, 158, 249);
+	border: solid 0.10vw rgb(133, 7, 145);
+}
+
+.metaux_pauvre {
+	background-color: rgb(236, 173, 110);
+	border: solid 0.10vw rgb(126, 71, 16);
+}
+
+.metaux_transition {
+	background-color: rgb(135, 226, 202);
+	border: solid 0.10vw rgb(44, 129, 106);
+}
+
+.mult_elem {
+	margin-top: 0.9vw;
+}
+
+.lanthanides {
+	background-color: rgb(235, 177, 210);
+	border: solid 0.10vw rgb(125, 32, 85);
+}
+.actinides {
+	background-color: rgb(255, 219, 142);
+	border: solid 0.10vw rgb(127, 70, 4);
+}
+
+.synthetique {
+	color: white;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+}
+
+.non_classe {
+	background-color: rgb(208, 207, 205);
+	border: solid 0.10vw rgb(28, 28, 27);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un produit</title>
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <form action="addproduct.php" method="POST">
+        <table>
+        <tr>
+            <td>Product Name :</td>
+            <td><input type="text" name="pname"/></td>
+        </tr>
+        <tr>
+            <td>Quantite :</td>
+            <td><input type="number" name="pnumber"/></td>
+        </tr>
+            <td><input type="submit" name="submit" value="Ajouter"/></td>
+        </table>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <form action="addproduct.php" method="POST">
+    <table>
+        <tr>
+            <td>Nom de produit: </td>
+            <td><input type="text" name="pname"/></td>
+        </tr>
+        <tr>
+            <td>Auteur: </td>
+            <td><input type="text" name="pauteur"/></td>
+        </tr>
+        <tr>
+            <td>Quantite :</td> 
+            <td><input type="number" name="pnumber"/></td>
+        </tr>
+        <tr>
+            <td>Image path :</td> 
+            <td><input type="text" name="image"/></td>
+        </tr>
+        <tr>
+            <td>Prix :</td> 
+            <td><input type="number" name="prix"/></td>
+        </tr>
+        <tr>
+            <td>Categorie :</td> 
+            <td><input type="text" name="cate"/></td>
+        </tr>
+        <tr>
+            <td>tag :</td> 
+            <td><input type="text" name="tag"/></td>
+        </tr>
+        <tr>
+            <td>Description :</td> 
+            <td><input type="text" name="des"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="Ajouter un nouveau produit"/></td>
+        </tr>
+    </table>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <form action="supproduct.php" method="POST">
+        <table>
+        <tr>
+            <td>Product Name :</td>
+            <td><input type="text" name="pname"/></td>
+        </tr>
+         </tr>
+            <td><input type="submit" name="submit" value="Supprimer"/></td>
+        </table>
+    </form>
+    <br />
+    <br />
+    <a href="index.php">Retour</a>
+</body>
+</html>

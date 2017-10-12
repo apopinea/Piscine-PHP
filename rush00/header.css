@@ -1,0 +1,170 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav_theme
+{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 150px;
+    position: absolute;
+}
+
+.box{
+    height: 100px;
+    width: 100%;
+    min-width: 1150px;
+    background-color: #36568B;
+}
+
+
+.logo {
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+
+}
+
+.name {
+        font-size: 20px;
+        color : #ffffff;
+        margin: auto;
+        margin: -70px 120px;
+}
+
+.form_create_cmpt {
+    position: absolute;
+    margin: auto;
+    margin-top: 80px;
+    margin-left: 300px;
+}
+
+.loggued {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 40px;
+}
+
+.form_login {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 40px;
+}
+
+.panier {
+    height : 50px;
+    width : 50px;
+    position: absolute;
+    top : 10px;
+}
+
+.lien_panier {
+    margin-left: 750px;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.connect {
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.nav2{
+    margin: 70px 150px;
+    border-radius: 5px;
+    width: 1000px;
+    height: 60px;
+}
+
+.nav2 ul{
+    list-style: none;
+}
+
+.nav2 li {
+    float: left;
+    line-height: 60px;
+    text-align: center;
+}
+
+.nav2 a{
+    text-decoration: none;
+    font-size: 19px;
+    color:#ffffff;
+    padding: 0 10px;
+}
+
+.nav2 a:hover{
+    color: #aaaaaa;
+    border-radius: 50px;
+    border : #E0BC04 2px;
+}
+
+.content2 {
+    margin-left: 180px;
+    height: 900px;
+    width: 100%;
+    position: absolute;
+    top : 100px;
+    background-color: #ffffff;
+    min-width: 1150px;
+}
+
+.content {
+    height: 900px;
+    width: 100%;
+    position: absolute;
+    top : 100px;
+    background-color: #ffffff;
+    min-width: 1150px;
+}
+
+.pbox{
+    height: 330px;
+    width: 230px;
+    margin-top: 20px;
+    margin-left: 5%;
+    display: inline-block;
+    background-color: #aaaaaa;
+    box-shadow: 10px 10px 10px #36568B;
+}
+
+.pbox a {
+    text-decoration: none;
+}
+
+.product_img{
+    margin: 10px 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.product_text{
+    margin-left: 5px;
+}
+
+.product_panier{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.product_prix{
+    margin-left: 135px;
+    margin-top: -30px;
+}
+
+.product_prix2{
+    margin-left: 135px;
+    margin-top: -20px;
+}
+
+.product_stock{
+    font-size: 70%;
+    margin-left: 65px;
+    margin-top: -15px;
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body{ background-image: url("https://images8.alphacoders.com/397/397989.jpg"); }
+
+h1 {
+   margin-top: 50px;
+   text-align: center;
+   color: white;
+   font-family: 'Orbitron', sans-serif;
+   font-size: 50px;}
+
+table{
+	border-collapse: collapse;
+    margin-right: 15px;}
+
+th, tr, td{
+	height: 5.5vw;
+    width: 5vw;}
+
+th, td { color: white; }
+
+.el:hover { border:1px solid white; }
+			
+td:nth-child(1){
+	text-align: center;}
+
+.el{
+	position: relative;
+    display: block;
+    color: black;
+    width: 95%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border:1px solid black;}
+
+#focus_content {
+	width: 100%;
+    height: 100%;
+    position: relative;}
+
+#focus {
+    display: none;
+    position: absolute;
+    margin-left: 50%;
+	color: red;
+    width: 15%;
+    height: 80%;
+	border-style: solid;}
+
+#f_type {
+	position: absolute;
+	display: none;
+	margin-left: 10%;
+    color: white;
+    height: 2vw;
+    width: 2vw;
+	border-style: solid;}
+
+#el_name {
+    display: block;
+    padding-top: 5px;
+    font-family: "Arial Black";
+    font-size: 1.2vw;
+	text-align: center;}
+
+ #el_cname {
+    display: block;
+    font-family: "verdana";
+    font-size: 0.7vw;
+    text-align: center;}
+
+#el_na {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    font-family: "verdana";
+	font-size: 1vw;}
+
+#el_mo {
+    height:15%;
+    text-align: right;
+    font-family: "verdana";
+    font-size: 1vw;}
+
+#metaux_alcalins {background-color: rgb(96, 22, 20);}
+#alcalino_terreux {background-color: rgb(165, 136, 25);}
+#lanthanides {background-color: rgb(72, 69, 94);}
+#actinides {background-color: rgb(57, 57, 62);}
+#metaux_transitoires {background-color: rgb(165, 29, 25);}
+#metaux_pauvres {background-color: rgb(250, 7, 1);}
+#metalloides {background-color: rgb(96, 81, 20);}
+#non_metaux {background-color: rgb(250, 199, 1);}
+#halogene {background-color: rgb(1, 196, 14);}
+#gaz_nobles {background-color: rgb(59, 29, 228);}
+#non_classes {background-color: rgb(43, 30, 114);}

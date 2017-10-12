@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mendeleïev</title>
+	<meta name="author" content="apopinea">
+	<meta name="keywords" content="php, piscine, ex03">
+	<meta name="description" content="Exercice 03 : L’agent se tasse">
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<style type="text/css">
+		 /*
+		}
+		.box
+		{
+			position: relative;
+			display: inline-block;
+			margin-top: 50px;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 25px;
+  		  	width: 400px;
+  		  	background: rgb(250, 250, 250);
+  		  	text-align: center;
+  		  	border: 1px solid black;
+  		  	<!--background: radial-gradient(white, grey);-->
+		}
+		.box::after, .box::before {
+			display: none;
+			content: " ";
+			position: absolute;
+			z-index: -1;
+		}
+		.hoz::before {
+			display:inline-block;  
+			top: 0px;    
+			left: 5%;    
+			width: 90%;   
+			height: 100%;  
+			background-color:black;   
+			border-radius:  0 0 50% 50% / 0 0 30% 30%; 
+			box-shadow: 0 17px 16px grey;   
+		}
+		*/
+	</style>
+</head>
+<body>
+	<section>
+		<h1 class="big_title">Tableau p&eacuteriodique des elements</h1>
+		<div id="mede_portrait" title="portrait de Mendeleïev">
+		</div>
+	</section>
+	<!--
+	<div class="box hoz">
+	</div>
+	-->
+	
+	<section>
+		<table id="tab_per_elem">
+			<thead>
+				<tr>
+					<th>IUPAC, CAS</br>/ Periode</th>
+					<th>1</br>I A</th>
+					<th>2</br>II A</th>
+					<th>3</br>III B</th>
+					<th>4</br>IV B</th>
+					<th>5</br>V B</th>
+					<th>6</br>VI B</th>
+					<th>7</br>VII B</th>
+					<th>8</br>VIII B</th>
+					<th>9</br>VIII B</th>
+					<th>10</br>VIII B</th>
+					<th>11</br>I B</th>
+					<th>12</br>II B</th>
+					<th>13</br>III A</th>
+					<th>14</br>IV A</th>
+					<th>15</br>V A</th>
+					<th>16</br>VI A</th>
+					<th>17</br>VII A</th>
+					<th>18</br>VIII A</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">1.0079</div>
+						<div class="el_symbole">H</div>
+						<div class="el_name">Hydrogene</div>
+						<div class="el_num_atom">1</div>
+					</td>
+					<td></td>
+					<td colspan="10" rowspan="3"></td>
+					<td colspan="5"></td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">4.0026</div>
+						<div class="el_symbole">He</div>
+						<div class="el_name">Helium</div>
+						<div class="el_num_atom">2</div>
+					</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">6.941</div>
+						<div class="el_symbole">Li</div>
+						<div class="el_name">Lithium</div>
+						<div class="el_num_atom">3</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">9.0122</div>
+						<div class="el_symbole">Be</div>
+						<div class="el_name">Beryllium</div>
+						<div class="el_num_atom">4</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">10.811</div>
+						<div class="el_symbole">B</div>
+						<div class="el_name">Bore</div>
+						<div class="el_num_atom">5</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">12.011</div>
+						<div class="el_symbole">C</div>
+						<div class="el_name">Carbone</div>
+						<div class="el_num_atom">6</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">14.007</div>
+						<div class="el_symbole">N</div>
+						<div class="el_name">Azote</div>
+						<div class="el_num_atom">7</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">15.999</div>
+						<div class="el_symbole">O</div>
+						<div class="el_name">Oxygene</div>
+						<div class="el_num_atom">8</div>
+					</td>
+					<td contenteditable="true" class="halogenes">
+						<div class="el_mol">18.998</div>
+						<div class="el_symbole">F</div>
+						<div class="el_name">Fluor</div>
+						<div class="el_num_atom">9</div>
+					</td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">20.180</div>
+						<div class="el_symbole">Ne</div>
+						<div class="el_name">Neon</div>
+						<div class="el_num_atom">10</div>
+					</td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">22.990</div>
+						<div class="el_symbole">Na</div>
+						<div class="el_name">Sodium</div>
+						<div class="el_num_atom">11</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">24.305</div>
+						<div class="el_symbole">Mg</div>
+						<div class="el_name">Magnesium</div>
+						<div class="el_num_atom">12</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">26.982</div>
+						<div class="el_symbole">Al</div>
+						<div class="el_name">Aluminium</div>
+						<div class="el_num_atom">13</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">28.086</div>
+						<div class="el_symbole">Si</div>
+						<div class="el_name">Silicium</div>
+						<div class="el_num_atom">14</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">30.974</div>
+						<div class="el_symbole">P</div>
+						<div class="el_name">Phosphore</div>
+						<div class="el_num_atom">15</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">32.065</div>
+						<div class="el_symbole">S</div>
+						<div class="el_name">Soufre</div>
+						<div class="el_num_atom">16</div>
+					</td>
+					<td contenteditable="true" class="halogenes">
+						<div class="el_mol">35.453</div>
+						<div class="el_symbole">Cl</div>
+						<div class="el_name">Chlore</div>
+						<div class="el_num_atom">17</div>
+					</td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">39.948</div>
+						<div class="el_symbole">Ar</div>
+						<div class="el_name">Argon</div>
+						<div class="el_num_atom">18</div>
+					</td>
+				</tr>
+				<tr>
+					<th>4</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">39.098</div>
+						<div class="el_symbole">K</div>
+						<div class="el_name">Potassium</div>
+						<div class="el_num_atom">19</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">40.078</div>
+						<div class="el_symbole">Ca</div>
+						<div class="el_name">Calcium</div>
+						<div class="el_num_atom">20</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">44.956</div>
+						<div class="el_symbole">Sc</div>
+						<div class="el_name">Scandium</div>
+						<div class="el_num_atom">21</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">47.867</div>
+						<div class="el_symbole">Ti</div>
+						<div class="el_name">Titane</div>
+						<div class="el_num_atom">22</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">50.942</div>
+						<div class="el_symbole">V</div>
+						<div class="el_name">Vanadium</div>
+						<div class="el_num_atom">23</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">51.996</div>
+						<div class="el_symbole">Cr</div>
+						<div class="el_name">Chrome</div>
+						<div class="el_num_atom">24</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">54.938</div>
+						<div class="el_symbole">Mn</div>
+						<div class="el_name">Manganese</div>
+						<div class="el_num_atom">25</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">55.845</div>
+						<div class="el_symbole">Fe</div>
+						<div class="el_name">Fer</div>
+						<div class="el_num_atom">26</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">58.693</div>
+						<div class="el_symbole">Co</div>
+						<div class="el_name">Cobalt</div>
+						<div class="el_num_atom">27</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">58.693</div>
+						<div class="el_symbole">Ni</div>
+						<div class="el_name">Nickel</div>
+						<div class="el_num_atom">28</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">63.546</div>
+						<div class="el_symbole">Cu</div>
+						<div class="el_name">Cuivre</div>
+						<div class="el_num_atom">29</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">65.38</div>
+						<div class="el_symbole">Zn</div>
+						<div class="el_name">Zinc</div>
+						<div class="el_num_atom">30</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">69.723</div>
+						<div class="el_symbole">Ga</div>
+						<div class="el_name">Gallium</div>
+						<div class="el_num_atom">31</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">72.64</div>
+						<div class="el_symbole">Ge</div>
+						<div class="el_name">Germanium</div>
+						<div class="el_num_atom">32</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">74.922</div>
+						<div class="el_symbole">As</div>
+						<div class="el_name">Arsenic</div>
+						<div class="el_num_atom">33</div>
+					</td>
+					<td contenteditable="true" class="non_metaux">
+						<div class="el_mol">78.96</div>
+						<div class="el_symbole">Se</div>
+						<div class="el_name">Selenium</div>
+						<div class="el_num_atom">34</div>
+					</td>
+					<td contenteditable="true" class="halogenes">
+						<div class="el_mol">79.904</div>
+						<div class="el_symbole">Br</div>
+						<div class="el_name">Brome</div>
+						<div class="el_num_atom">35</div>
+					</td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">83.798</div>
+						<div class="el_symbole">Kr</div>
+						<div class="el_name">Krypton</div>
+						<div class="el_num_atom">36</div>
+					</td>
+				</tr>
+				<tr>
+					<th>5</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">85.468</div>
+						<div class="el_symbole">Rb</div>
+						<div class="el_name">Rubidium</div>
+						<div class="el_num_atom">37</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">87.62</div>
+						<div class="el_symbole">Sr</div>
+						<div class="el_name">Strontium</div>
+						<div class="el_num_atom">38</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">88.906</div>
+						<div class="el_symbole">Y</div>
+						<div class="el_name">Yitrium</div>
+						<div class="el_num_atom">39</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">91.224</div>
+						<div class="el_symbole">Zr</div>
+						<div class="el_name">zirconium</div>
+						<div class="el_num_atom">40</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">92.906</div>
+						<div class="el_symbole">Nb</div>
+						<div class="el_name">Niobium</div>
+						<div class="el_num_atom">41</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">95.96</div>
+						<div class="el_symbole">Mo</div>
+						<div class="el_name">Molybdene</div>
+						<div class="el_num_atom">42</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(98)</div>
+						<div class="el_symbole synthetique">Tc</div>
+						<div class="el_name">Technétium</div>
+						<div class="el_num_atom">43</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">101.07</div>
+						<div class="el_symbole">Ru</div>
+						<div class="el_name">Ruthenium</div>
+						<div class="el_num_atom">44</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">102.91</div>
+						<div class="el_symbole">Rh</div>
+						<div class="el_name">Rhodium</div>
+						<div class="el_num_atom">45</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">106.42</div>
+						<div class="el_symbole">Pd</div>
+						<div class="el_name">Palladium</div>
+						<div class="el_num_atom">46</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">107.87</div>
+						<div class="el_symbole">Ag</div>
+						<div class="el_name">Argent</div>
+						<div class="el_num_atom">47</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">112.41</div>
+						<div class="el_symbole">Cd</div>
+						<div class="el_name">Cadmium</div>
+						<div class="el_num_atom">48</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">114.82</div>
+						<div class="el_symbole">In</div>
+						<div class="el_name">Indium</div>
+						<div class="el_num_atom">49</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">118.71</div>
+						<div class="el_symbole">Sn</div>
+						<div class="el_name">Etain</div>
+						<div class="el_num_atom">50</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">121.76</div>
+						<div class="el_symbole">Sb</div>
+						<div class="el_name">Antimoine</div>
+						<div class="el_num_atom">51</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">127.60</div>
+						<div class="el_symbole">Te</div>
+						<div class="el_name">Tellure</div>
+						<div class="el_num_atom">52</div>
+					</td>
+					<td contenteditable="true" class="halogenes">
+						<div class="el_mol">126.90</div>
+						<div class="el_symbole">I</div>
+						<div class="el_name">Iode</div>
+						<div class="el_num_atom">53</div>
+					</td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">131.29</div>
+						<div class="el_symbole">Xe</div>
+						<div class="el_name">Xeon</div>
+						<div class="el_num_atom">54</div>
+					</td>
+				</tr>
+				<tr>
+					<th>6</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">132.91</div>
+						<div class="el_symbole">Cs</div>
+						<div class="el_name">Cesium</div>
+						<div class="el_num_atom">55</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">137.33</div>
+						<div class="el_symbole">Ba</div>
+						<div class="el_name">Baryum</div>
+						<div class="el_num_atom">56</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_symbole mult_elem" >La - Lu</div>
+						<div class="el_name">Lanthanides</div>
+						<div class="el_num_atom">57 - 71</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">178.49</div>
+						<div class="el_symbole">Hf</div>
+						<div class="el_name">Hafnium</div>
+						<div class="el_num_atom">72</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">180.95</div>
+						<div class="el_symbole">Ta</div>
+						<div class="el_name">Tantal</div>
+						<div class="el_num_atom">73</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">183.84</div>
+						<div class="el_symbole">W</div>
+						<div class="el_name">Tungstene</div>
+						<div class="el_num_atom">74</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">186.21</div>
+						<div class="el_symbole">Re</div>
+						<div class="el_name">Rhenium</div>
+						<div class="el_num_atom">75</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">190.23</div>
+						<div class="el_symbole">Os</div>
+						<div class="el_name">Osmium</div>
+						<div class="el_num_atom">76</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">192.22</div>
+						<div class="el_symbole">Ir</div>
+						<div class="el_name">Iridium</div>
+						<div class="el_num_atom">77</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">195.08</div>
+						<div class="el_symbole">Pt</div>
+						<div class="el_name">Platine</div>
+						<div class="el_num_atom">78</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">196.97</div>
+						<div class="el_symbole">Au</div>
+						<div class="el_name">Or</div>
+						<div class="el_num_atom">79</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">200.59</div>
+						<div class="el_symbole">Hg</div>
+						<div class="el_name">Mercure</div>
+						<div class="el_num_atom">80</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">204.38</div>
+						<div class="el_symbole">Tl</div>
+						<div class="el_name">Thalium</div>
+						<div class="el_num_atom">81</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">207.2</div>
+						<div class="el_symbole">Pb</div>
+						<div class="el_name">plomb</div>
+						<div class="el_num_atom">82</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">208.98</div>
+						<div class="el_symbole">Bi</div>
+						<div class="el_name">Bismuth</div>
+						<div class="el_num_atom">83</div>
+					</td>
+					<td contenteditable="true" class="metalloide">
+						<div class="el_mol">(209)</div>
+						<div class="el_symbole">Po</div>
+						<div class="el_name">Polonium</div>
+						<div class="el_num_atom">84</div>
+					</td>
+					<td contenteditable="true" class="halogenes">
+						<div class="el_mol">(210)</div>
+						<div class="el_symbole">At</div>
+						<div class="el_name">Astate</div>
+						<div class="el_num_atom">85</div>
+					</td>
+					<td contenteditable="true" class="gaz_nobles">
+						<div class="el_mol">(222)</div>
+						<div class="el_symbole">Rn</div>
+						<div class="el_name">Radon</div>
+						<div class="el_num_atom">86</div>
+					</td>
+				</tr>
+				<tr>
+					<th>7</th>
+					<td contenteditable="true" class="metaux_alcalins">
+						<div class="el_mol">(223)</div>
+						<div class="el_symbole">FR</div>
+						<div class="el_name">Francium</div>
+						<div class="el_num_atom">87</div>
+					</td>
+					<td contenteditable="true" class="metaux_alcalino_terreux">
+						<div class="el_mol">(226)</div>
+						<div class="el_symbole">Ra</div>
+						<div class="el_name">Radium</div>
+						<div class="el_num_atom">88</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_symbole mult_elem" >Ac - Lr</div>
+						<div class="el_name">Actinides</div>
+						<div class="el_num_atom">89 - 103</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(267)</div>
+						<div class="el_symbole synthetique">RF</div>
+						<div class="el_name">Rutherfordium</div>
+						<div class="el_num_atom">104</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(268)</div>
+						<div class="el_symbole synthetique">Db</div>
+						<div class="el_name">Dubnium</div>
+						<div class="el_num_atom">105</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(271)</div>
+						<div class="el_symbole synthetique">Sg</div>
+						<div class="el_name">Seaborgium</div>
+						<div class="el_num_atom">106</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(272)</div>
+						<div class="el_symbole synthetique">Bh</div>
+						<div class="el_name">Bohrium</div>
+						<div class="el_num_atom">107</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(277)</div>
+						<div class="el_symbole synthetique">Hs</div>
+						<div class="el_name">Hassium</div>
+						<div class="el_num_atom">108</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(276)</div>
+						<div class="el_symbole synthetique">Mt</div>
+						<div class="el_name">Meitnerium</div>
+						<div class="el_num_atom">109</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(281)</div>
+						<div class="el_symbole synthetique">Ds</div>
+						<div class="el_name">Darmstadtium</div>
+						<div class="el_num_atom">110</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(280)</div>
+						<div class="el_symbole synthetique">Rg</div>
+						<div class="el_name">Roentgenium</div>
+						<div class="el_num_atom">111</div>
+					</td>
+					<td contenteditable="true" class="metaux_transition">
+						<div class="el_mol">(285)</div>
+						<div class="el_symbole synthetique">Cn</div>
+						<div class="el_name">Copernicium</div>
+						<div class="el_num_atom">112</div>
+					</td>
+					<td contenteditable="true" class="non_classe">
+						<div class="el_mol">(284)</div>
+						<div class="el_symbole synthetique">Uut</div>
+						<div class="el_name">Ununtrium</div>
+						<div class="el_num_atom">113</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">(287)</div>
+						<div class="el_symbole synthetique">Fl</div>
+						<div class="el_name">Flerovium</div>
+						<div class="el_num_atom">114</div>
+					</td>
+					<td contenteditable="true" class="non_classe">
+						<div class="el_mol">(288)</div>
+						<div class="el_symbole synthetique">Uup</div>
+						<div class="el_name">Ununpentium</div>
+						<div class="el_num_atom">115</div>
+					</td>
+					<td contenteditable="true" class="metaux_pauvre">
+						<div class="el_mol">(291)</div>
+						<div class="el_symbole synthetique">Lv</div>
+						<div class="el_name">Livermorium</div>
+						<div class="el_num_atom">116</div>
+					</td>
+					<td contenteditable="true" class="non_classe">
+						<div class="el_mol">(292)</div>
+						<div class="el_symbole synthetique">Uus</div>
+						<div class="el_name">Ununseptium</div>
+						<div class="el_num_atom">117</div>
+					</td>
+					<td contenteditable="true" class="non_classe">
+						<div class="el_mol">(294)</div>
+						<div class="el_symbole synthetique">Uuo</div>
+						<div class="el_name">Ununoctium</div>
+						<div class="el_num_atom">118</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" rowspan="3"></td>
+					<td colspan="16" style="padding-top: 5vw;"></td>
+				</tr>
+				<tr>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">138.91</div>
+						<div class="el_symbole">La</div>
+						<div class="el_name">Lanthane</div>
+						<div class="el_num_atom">57</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">140.12</div>
+						<div class="el_symbole">Ce</div>
+						<div class="el_name">Cerium</div>
+						<div class="el_num_atom">58</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">140.91</div>
+						<div class="el_symbole">Pr</div>
+						<div class="el_name">Praseodyme</div>
+						<div class="el_num_atom">59</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">144.24</div>
+						<div class="el_symbole">Nd</div>
+						<div class="el_name">Neodyme</div>
+						<div class="el_num_atom">60</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">(145)</div>
+						<div class="el_symbole synthetique">Pm</div>
+						<div class="el_name">Promethium</div>
+						<div class="el_num_atom">61</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">150.36</div>
+						<div class="el_symbole">Sm</div>
+						<div class="el_name">Samarium</div>
+						<div class="el_num_atom">62</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">151.96</div>
+						<div class="el_symbole">Eu</div>
+						<div class="el_name">Europium</div>
+						<div class="el_num_atom">63</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">157.25</div>
+						<div class="el_symbole">Gd</div>
+						<div class="el_name">Gadolinium</div>
+						<div class="el_num_atom">64</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">158.93</div>
+						<div class="el_symbole">Tb</div>
+						<div class="el_name">Terbium</div>
+						<div class="el_num_atom">65</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">162.50</div>
+						<div class="el_symbole">Dy</div>
+						<div class="el_name">Dysprosium</div>
+						<div class="el_num_atom">66</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">164.93</div>
+						<div class="el_symbole">Ho</div>
+						<div class="el_name">Holmium</div>
+						<div class="el_num_atom">67</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">167.26</div>
+						<div class="el_symbole">Er</div>
+						<div class="el_name">Erbium</div>
+						<div class="el_num_atom">68</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">168.93</div>
+						<div class="el_symbole">Tm</div>
+						<div class="el_name">Thulium</div>
+						<div class="el_num_atom">69</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">173.05</div>
+						<div class="el_symbole">Yb</div>
+						<div class="el_name">Ytterbium</div>
+						<div class="el_num_atom">70</div>
+					</td>
+					<td contenteditable="true" class="lanthanides">
+						<div class="el_mol">174.97</div>
+						<div class="el_symbole">Lu</div>
+						<div class="el_name">Lutetium</div>
+						<div class="el_num_atom">71</div>
+					</td>
+				</tr>
+				<tr>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(227)</div>
+						<div class="el_symbole">Ac</div>
+						<div class="el_name">Actinium</div>
+						<div class="el_num_atom">89</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">232.04</div>
+						<div class="el_symbole">Th</div>
+						<div class="el_name">Thorium</div>
+						<div class="el_num_atom">90</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">231.04</div>
+						<div class="el_symbole">Pa</div>
+						<div class="el_name">Protactinium</div>
+						<div class="el_num_atom">91</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">238.03</div>
+						<div class="el_symbole">U</div>
+						<div class="el_name">Uranium</div>
+						<div class="el_num_atom">92</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(237)</div>
+						<div class="el_symbole synthetique">Np</div>
+						<div class="el_name">Neptunium</div>
+						<div class="el_num_atom">93</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(244)</div>
+						<div class="el_symbole synthetique">Pu</div>
+						<div class="el_name">Plutonium</div>
+						<div class="el_num_atom">94</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(243)</div>
+						<div class="el_symbole synthetique">Am</div>
+						<div class="el_name">Americium</div>
+						<div class="el_num_atom">95</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(247)</div>
+						<div class="el_symbole synthetique">Cm</div>
+						<div class="el_name">Curium</div>
+						<div class="el_num_atom">96</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(247)</div>
+						<div class="el_symbole synthetique">Bk</div>
+						<div class="el_name">Berkelium</div>
+						<div class="el_num_atom">97</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(251)</div>
+						<div class="el_symbole synthetique">Cf</div>
+						<div class="el_name">Californium</div>
+						<div class="el_num_atom">98</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(252)</div>
+						<div class="el_symbole synthetique">Es</div>
+						<div class="el_name">Einsteinium</div>
+						<div class="el_num_atom">99</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(257</div>
+						<div class="el_symbole synthetique">Fm</div>
+						<div class="el_name">Fermium</div>
+						<div class="el_num_atom">100</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(258)</div>
+						<div class="el_symbole synthetique">Md</div>
+						<div class="el_name">Mendelenium</div>
+						<div class="el_num_atom">101</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(259)</div>
+						<div class="el_symbole synthetique">No</div>
+						<div class="el_name">Nobelium</div>
+						<div class="el_num_atom">102</div>
+					</td>
+					<td contenteditable="true" class="actinides">
+						<div class="el_mol">(262)</div>
+						<div class="el_symbole synthetique">Lr</div>
+						<div class="el_name">Lawrencium</div>
+						<div class="el_num_atom">103</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
